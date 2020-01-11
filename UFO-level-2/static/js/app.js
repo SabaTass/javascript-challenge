@@ -14,6 +14,7 @@ button_filter.addEventListener("click", Filter_Click);
 
 function Table(){
     tbody.innerHTML = "";
+    
     for(var i = 0; i< tableData.length; i++){
         var address = tableData[i];
         console.log(address)
@@ -58,7 +59,7 @@ function Filter_Click() {
         return address_City === filter_city;
       });
     }
-    else{ableData};
+    else{tableData};
   
     if(filter_country != ""){
         tableData = tableData.filter(function(address){
@@ -74,11 +75,12 @@ function Filter_Click() {
         return address_Shape === filter_shape;
       });
     }
+    
     else{tableData};
   
   Table();
   }
-
+ 
   // Render the table for the first time on page load
   Table();
 

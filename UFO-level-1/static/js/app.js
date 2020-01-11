@@ -16,8 +16,23 @@ var button2= d3.select("#clear-btn");                   //Defining/Selecting but
 
 button.on("click", function(){                          //Adding button functionality. 
     
-    var input_element = d3.select(".form-control");      //Selecting the input element upon click. 
-    var input_date = input_element.property("value");     //Getting input value entered. 
+         //Selecting the input element upon click. 
+        //Getting input value entered. 
+    var tbody = d3.select("tbody");
+    var date_time = d3.select("#datetime");
+    var input_date = date_time.property("value"); 
+
+    var city = d3.select("#city");
+    var input_city= city.property("value"); 
+
+    var state = d3.select("#state");
+    var input_state = state.property("value"); 
+
+    var country = d3.select("#country");
+    var input_country = country.property("value"); 
+
+    var shape = d3.select("#shape");
+    var input_shape = shape.property("value"); 
   
     var filtered_Data = tableData.filter(data_js => data_js.datetime === input_date);
 
